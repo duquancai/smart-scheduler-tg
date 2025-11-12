@@ -2,7 +2,7 @@ name: Smart Telegram Scheduler
 
 on:
   schedule:
-    - cron: "0 0 22 3 *"  (初始占位，运行后自动更新)
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 permissions:
