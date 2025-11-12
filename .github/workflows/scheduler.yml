@@ -1,26 +1,18 @@
-name: Smart Telegram Scheduler
+name: 🔁 Domain Renewal Scheduler
 
 on:
   schedule:
-    - cron: "0 0 15 10 *"
+    - cron: "0 0 1 1 *"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  run:
+  update-schedule:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm install
-      - name: Run scheduler
+      - name: 🔁 Update scheduler
         env:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
-          GH_REPOSITORY: ${{ secrets.GH_REPOSITORY }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPOSITORY: ${{ github.repository }}
         run: node scheduler.js
