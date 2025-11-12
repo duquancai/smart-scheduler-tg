@@ -23,4 +23,5 @@ jobs:
         env:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          GH_REPOSITORY: ${{ secrets.GH_REPOSITORY }}
         run: node scheduler.js

@@ -4,7 +4,7 @@ const fs = require("fs");
 const BOT_TOKEN = process.env.TG_BOT_TOKEN;
 const CHAT_ID = process.env.TG_CHAT_ID;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const REPO = process.env.GITHUB_REPOSITORY;
+const REPO = process.env.GH_REPOSITORY;
 const FILE_PATH = ".github/workflows/scheduler.yml";
 
 if (!BOT_TOKEN || !CHAT_ID) {
