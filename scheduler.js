@@ -1,5 +1,4 @@
 const fetch = require("node-fetch");
-const fs = require("fs");
 
 const BOT_TOKEN = process.env.TG_BOT_TOKEN;
 const CHAT_ID = process.env.TG_CHAT_ID;
