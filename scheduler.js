@@ -15,8 +15,8 @@ if (!BOT_TOKEN || !CHAT_ID || !GITHUB_TOKEN) {
 (async () => {
   // 发送 Telegram 消息
   const now = new Date();
-  const msg = `📅 请续订你的域名us.kg及xx.kg，到期时间不足1月！\n 🔗 <a href=https://dash.domain.digitalplat.org>查看分支</a>\n\n`;
-
+  let msg = `📅 请续订你的域名us.kg及xx.kg，到期时间不足1月！\n`;
+  msg += `   🔗 <a href=https://dash.domain.digitalplat.org>请点击进入手动续订</a>\n\n`;
   await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
