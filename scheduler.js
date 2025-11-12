@@ -7,8 +7,8 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO = process.env.GITHUB_REPOSITORY;
 const FILE_PATH = ".github/workflows/scheduler.yml";
 
-if (!BOT_TOKEN || !CHAT_ID || !GITHUB_TOKEN) {
-  console.error("❌ 缺少环境变量：TG_BOT_TOKEN / TG_CHAT_ID / GITHUB_TOKEN");
+if (!BOT_TOKEN || !CHAT_ID) {
+  console.error("❌ 缺少环境变量：TG_BOT_TOKEN / TG_CHAT_ID");
   process.exit(1);
 }
 
