@@ -2,7 +2,7 @@ name: Smart Telegram Scheduler
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 15 10 *"
   workflow_dispatch:
 
 permissions:
